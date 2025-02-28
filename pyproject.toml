@@ -1,9 +1,12 @@
 [tool.poetry]
 name = "doctrpp"
 version = "0.1.0"
-description = ""
+description = "Document Image Processing with PaddlePaddle"
 authors = ["Yale Huang <yale@hwang.men>"]
 readme = "README.md"
+packages = [
+    { include = "doctrpp" }
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -16,6 +19,8 @@ matplotlib = "^3.10.1"
 albumentations = "^2.0.4"
 paddlepaddle-gpu = "^2.6.2"
 
+[tool.poetry.scripts]
+doctrpp = "doctrpp.cli:main"
 
 [build-system]
 requires = ["poetry-core"]
